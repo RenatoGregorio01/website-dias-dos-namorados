@@ -9,21 +9,20 @@ body {
 
 .carousel {
   display: flex;
-  gap: 10px;             /* espaço entre as imagens */
-  border-radius: 20px;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
+  padding: 20px;
+  flex-wrap: nowrap; /* impede que quebrem linha */
 }
 
 .carousel img {
-  flex-grow: 1;          /* todas crescem igualmente para preencher o espaço */
-  flex-basis: 0;         /* base zero para dividir o espaço igualmente */
+  width: calc((100% - 50px) / 6); /* 6 imagens, 5 gaps de 10px */
   height: auto;
-  max-height: 500px;     /* limite máximo de altura */
-  object-fit: cover;
   border-radius: 20px;
+  object-fit: cover;
   transition: transform 0.5s ease-in-out;
 }
-
 
 
 h1 {
