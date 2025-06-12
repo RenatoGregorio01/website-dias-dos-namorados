@@ -9,19 +9,21 @@ body {
 
 .carousel {
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap; /* mantém tudo numa linha */
   gap: 10px;
   width: 100%;
-  padding: 20px;
-  flex-wrap: nowrap; /* impede que quebrem linha */
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
 }
 
 .carousel img {
-  width: calc((100% - 50px) / 6); /* 6 imagens, 5 gaps de 10px */
+  width: 100%;            /* necessário para responsividade */
+  max-width: calc((100% - 50px) / 6); /* divide largura entre 6 imagens + gaps */
   height: auto;
-  border-radius: 20px;
   object-fit: cover;
-  transition: transform 0.5s ease-in-out;
+  border-radius: 20px;
 }
 
 
