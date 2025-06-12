@@ -6,7 +6,7 @@ $('.carousel').slick({
       adaptiveHeight: true
     });
 
-    const inicio = new Date("2015-09-13T00:00:00").getTime();
+    const inicio = new Date("2025-02-18T00:00:00").getTime();
     setInterval(() => {
       const agora = new Date().getTime();
       let distancia = agora - inicio;
@@ -28,10 +28,7 @@ $('.carousel').slick({
 
       const segundos = Math.floor(distancia / 1000);
 
-      document.getElementById("anos").textContent = String(anos).padStart(2, '0');
+   
       document.getElementById("meses").textContent = String(meses).padStart(2, '0');
-      document.getElementById("dias").textContent = String(dias).padStart(2, '0');
-      document.getElementById("horas").textContent = String(horas).padStart(2, '0');
-      document.getElementById("minutos").textContent = String(minutos).padStart(2, '0');
-      document.getElementById("segundos").textContent = String(segundos).padStart(2, '0');
+      
     }, 1000);
