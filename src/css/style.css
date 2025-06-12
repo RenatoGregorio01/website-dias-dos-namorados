@@ -73,6 +73,10 @@ h1 {
   font-weight: bold;
 }
 
+#audio, audio {
+  display: none;
+}
+
 footer {
   margin: 30px 0;
 }
