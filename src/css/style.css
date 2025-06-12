@@ -9,20 +9,24 @@ body {
 
 .carousel {
   display: flex;
-  flex-wrap: wrap;              /* permite quebrar linha se precisar */
-  justify-content: center;      /* centraliza as imagens */
-  gap: 5px;                     /* espaço pequeno entre elas */
+  flex-wrap: nowrap;           /* impede quebra de linha */
+  justify-content: center;     /* centraliza na horizontal */
+  align-items: center;         /* alinha verticalmente (opcional) */
+  gap: 10px;
+  width: 100%;
   padding: 10px;
+  overflow-x: hidden;          /* oculta rolagem horizontal */
+  box-sizing: border-box;
 }
 
 .carousel img {
-  flex: 1 1 15%;                /* tenta ocupar ~15% da largura */
-  max-width: 15%;               /* garante que fiquem até 6 por linha */
-  min-width: 120px;             /* impede que fiquem pequenas demais */
+  flex: 1 1 auto;               /* distribui igualmente */
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
+
 
 
 
