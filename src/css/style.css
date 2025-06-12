@@ -9,29 +9,21 @@ body {
 
 .carousel {
   display: flex;
-  /* overflow: hidden;  <-- REMOVA essa linha */
-  width: 100%;
-  max-width: 100%;
-  /* pode deixar mais largo */
-  margin: 20px auto;
+  gap: 10px;             /* espaço entre as imagens */
   border-radius: 20px;
-  gap: 10px;
-  /* espaço entre as imagens */
-  justify-content: center;
-  /* centraliza as imagens */
-  flex-wrap: wrap;
-  /* se quiser quebrar linha quando não couber */
+  width: 100%;
 }
 
 .carousel img {
-  width: 150px;
-  /* tamanho fixo para ficar lado a lado */
+  flex-grow: 1;          /* todas crescem igualmente para preencher o espaço */
+  flex-basis: 0;         /* base zero para dividir o espaço igualmente */
   height: auto;
-  max-height: 500px;
+  max-height: 500px;     /* limite máximo de altura */
   object-fit: cover;
   border-radius: 20px;
   transition: transform 0.5s ease-in-out;
 }
+
 
 
 h1 {
